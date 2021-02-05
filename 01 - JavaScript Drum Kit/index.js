@@ -16,10 +16,5 @@ function removeKeyAnimation (e) {
     this.classList.remove('playing');
 }
 
-
 keys.forEach(elem => elem.addEventListener('transitionend', removeKeyAnimation));
 window.addEventListener('keydown', playSoundAndAddKeyAnimation);
-
-
-
-
