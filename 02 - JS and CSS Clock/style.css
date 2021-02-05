@@ -41,5 +41,9 @@ body {
   height: 6px;
   background: #000;
   position: absolute;
-  top: 50%
+  top: 50%;
+  transform-origin: 100%;
+  transform: rotate(90deg);
+  transition: all 0.05s;
+  transition-timing-function: cubic-bezier(0.1, 2.0, 0.5, 1.0);
 }
