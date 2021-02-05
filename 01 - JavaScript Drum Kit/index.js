@@ -1,9 +1,9 @@
 const keys = Array.from(document.querySelectorAll(".key"));
 const sounds = Array.from(document.querySelectorAll("audio[data-key]"));
 
-function playSoundAndAddKeyAnimation({which}){
+function playSoundAndAddKeyAnimation({which, repeat}){
+  if(repeat) return;
   const key = keys.find(elem => elem.dataset.key == which);
- 
   if(!key) return;   
   const sound = sounds.find(elem => elem.dataset.key == which);
   sound.currentTime = 0;
