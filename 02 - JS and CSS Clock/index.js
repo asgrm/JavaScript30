@@ -1,6 +1,13 @@
+const clock = document.querySelector('.clock');
+
+for (let i = 1; i < 60; i++) {
+  clock.innerHTML += `<div class="lines" style="transform: rotate(${i * 6}deg)"></div>`;
+
+}
 const secondHand = document.querySelector('.second-hand');
 const minuteHand = document.querySelector('.min-hand');
 const hourHand = document.querySelector('.hour-hand');
+
 function setDate() {
   const now = new Date();
   const seconds = now.getSeconds();
