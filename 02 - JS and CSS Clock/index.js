@@ -13,9 +13,9 @@ function setDate() {
   const seconds = now.getSeconds();
   const minute = now.getMinutes();
   const hours = now.getHours();
-  const secondDeg = (seconds * 6);
-  const minuteDeg = (minute * 6);
-  const hourDeg = (hours * 30);
+  const secondDeg = seconds * 6;
+  const minuteDeg = minute * 6 + seconds/10;
+  const hourDeg = hours * 30 + minute/2;
   
   if (seconds === 0) secondHand.classList.add('nottransition');
   if (seconds === 1) secondHand.classList.remove('nottransition');
