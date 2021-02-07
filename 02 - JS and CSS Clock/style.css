@@ -27,6 +27,7 @@ body {
   inset 0 0 0 3px #EFEFEF,
   inset 0 0 10px black,
   0 0 10px rgba(0,0,0,0.2);
+  background:rgb(0, 51, 58);
 
 }
 
@@ -34,7 +35,6 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  /* transform: translateY(-3px); */
 }
 
 .hand {
@@ -43,13 +43,44 @@ body {
   height: 15rem;
   background: #000;
   position: absolute;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
   top: 0;
   left: 50%;
   margin-left: -3px;
   transform-origin: 50% 100%;
-  /* transform: rotate(90deg); */
   transition: all 0.05s;
   transition-timing-function: cubic-bezier(0.1, 2.0, 0.5, 1.0);
+}
+.hour-hand {
+  z-index: 1;
+  top: 7rem;
+  width: 6px;
+  height: 8rem;
+  background: #fff;
+  margin-left: -3px;
+  box-shadow: 0 0 2px #000;
+}
+
+.min-hand {
+  z-index: 2;
+  top: 3rem;
+  width: 4px;
+  height: 12rem;
+  background: #fff;
+  margin-left: -2px;
+  box-shadow: 0 0 2px #000;
+}
+
+.second-hand {
+  z-index: 3;
+  top: 0;
+  width: 2px;
+  height: 15rem;
+  background: #fff;
+  margin-left: -1px;
+  box-shadow: 0 0 2px #000;
+
 }
 
 .nottransition {
@@ -58,24 +89,81 @@ body {
 
 .lines {
   position: absolute;
-  z-index: 1;
+  
   width: 2px;
   height: 15px;
-  background: #555;
+  background: #ddd;
   left: 50%;
   top: 3px;
   margin-left: -1px;
   transform-origin: 50% 167px;
 }
 
-.lines:nth-of-type(5n+2) {
+.lines:nth-of-type(5n-2) {
   position: absolute;
-  z-index: 1;
   width: 4px;
   height: 20px;
-  background: #555;
+  background: #fff;
   left: 50%;
   top: 3px;
   margin-left: -2px;
   transform-origin: 50% 167px;
 }
+.clock .dot {
+  z-index: 5;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 1rem;
+  height: 1rem;
+  background: rgb(0, 30, 34);
+}
+
+span {
+  position:absolute;
+  display: block;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fff;
+  text-shadow: 0 0 1px  #000;
+}
+.h3{
+  top: 50%;
+  margin-top: -11.5px;
+  right: 30px;
+}
+
+.h3{
+  top: 50%;
+  margin-top: -11.5px;
+  right: 30px;
+}
+
+.h3{
+  top: 50%;
+  margin-top: -11.5px;
+  right: 30px;
+}
+
+.h6 {
+  bottom: 30px;
+  left: 50%;
+  margin-left: -5.5px;
+}
+
+.h9{
+  top: 50%;
+  margin-top: -11.5px;
+  left: 30px;
+}
+
+.h12 {
+  top: 30px;
+  left: 50%;
+  margin-left: -11.1px;
+}
+
