@@ -11,11 +11,6 @@ function toggleOpen(){
 
 function toggleActive(e) {
   if(e.propertyName.includes('flex')) {
-  panels.forEach(elem => {
-    if (this !== elem) {
-      elem.classList.remove('open-active')
-    }
-  })
   this.classList.toggle('open-active');
   }
 }
