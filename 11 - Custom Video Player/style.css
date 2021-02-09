@@ -28,12 +28,16 @@ body {
 }
 
 .player:fullscreen {
-  min-width: none;
+  max-width: none;
   width: 100%;
 }
 
 .player:-webkit-full-screen {
   max-width: none;
+  width: 100%;
+}
+
+.player__video {
   width: 100%;
 }
 
@@ -151,4 +155,9 @@ input[type=range]::-moz-range-thumb {
   border-radius: 50px;
   background: #ffc600;
   cursor: pointer;
+}
+
+.icon-shrink{
+  display: none;
+
 }
