@@ -10,6 +10,7 @@ const iconFull = player.querySelector('.icon-full');
 const iconShrink = player.querySelector('.icon-shrink');
 
 let mousedown = false;
+let isMousePressed = false;
 let isFullScreen = false;
 
 function togglePlay() {
@@ -26,6 +27,9 @@ function skip() {
 
 function handleRangeUpdate() {
   video[this.name] = this.value;
+}
+function handleRangeUpdateMove(e) {
+  handleRangeUpdate.call(e.target);
 }
 
 function handleProgress() {
@@ -78,6 +82,13 @@ toggle.addEventListener('click', togglePlay);
 
 skipButtons.forEach(elem => elem.addEventListener('click', skip));
 ranges.forEach(elem => elem.addEventListener('change', handleRangeUpdate));
+
+// It handles mousemove instead of using 'input' event together with function handleRangeUpdate. Just to check whether it works this way
+ranges.forEach(elem => elem.addEventListener('mousemove', (e) => isMousePressed && handleRangeUpdateMove(e)));
+ranges.forEach(elem => {
+  elem.addEventListener('mouseup', () => isMousePressed = false);
+  elem.addEventListener('mousedown', () => isMousePressed = true);
+});
 
 
 progress.addEventListener('click', scrub);
