@@ -1,11 +1,10 @@
 const timeNodes = document.querySelectorAll('[data-time]');
 
 const seconds = Array.from(document.querySelectorAll('[data-time]'), node => node.dataset.time)
-.map(timeCode => {
-  const [min, sec] = timeCode.split(':').map(parseFloat);
-  return (min *60) + sec;
-})
-.reduce((acc, cur) => acc + cur);
+.reduce((acc, cur) => {
+  const [min, sec] = cur.split(':');
+  return acc + +min * 60 + +sec;
+}, 0);
 
 let secondsLeft = seconds;
 const hours = Math.floor(seconds / 3600);
