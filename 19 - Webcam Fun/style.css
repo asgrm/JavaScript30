@@ -16,12 +16,26 @@ html {
   max-width: 50vw;
   margin: 2rem auto;
   border-radius: 2px;
+  background: none;
+  text-align: center;
 }
 
 .photobooth:after {
   content: '';
   display: block;
   clear: both;
+}
+
+
+button {
+  background: rgb(3, 66, 138);
+  color: #fff;
+  font-family: sans-serif;
+  border: none;
+  outline: none;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 }
 
 .photo {
