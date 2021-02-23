@@ -4,5 +4,5 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 30px;
-  background: url('./double-bubble-outline.png') red;
+  background: url('./double-bubble-outline.png');
 }
