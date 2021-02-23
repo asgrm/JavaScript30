@@ -6,12 +6,29 @@ html {
   box-sizing: inherit; 
 }
 
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #474747;
+background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23009071' fill-opacity='1' fill-rule='evenodd'%3E%3Ccircle cx='3' cy='3' r='3'/%3E%3Ccircle cx='13' cy='13' r='3'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+h2 {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+}
+
 div {
   width: 100%;
-  padding: 100px;
+  padding: 50px;
+  font-size: 20px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  border-radius: 10px
 }
 
 .one {
+  margin: 0 auto 50px;
+  width: 50%;
   background: thistle;
 }
 
@@ -21,4 +38,17 @@ div {
 
 .three {
   background: coral;
+}
+
+button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  cursor: pointer;
+  background: coral;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 20px;
+  display: block;
+  margin: 0 auto;
 }
